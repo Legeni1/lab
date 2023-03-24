@@ -6,9 +6,9 @@ RUN pip install redis
 EXPOSE 8080
 ENV ODOO_URL: https://www.odoo.com/
 ENV PGADMIN_URL: https://www.pgadmin.org/
-ENV FLASK_APP=app.py
+ENV FLASK_APP=
 ENV FLASK_RUN_HOST=0.0.0.0
-COPY . .
+COPY . app.py
 ENTRYPOINT ["python", "app.py"]
 
 
