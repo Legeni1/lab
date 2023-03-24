@@ -1,0 +1,14 @@
+"
+BUILD
+    docker build -t ic-webapp:1.0 .
+    
+LANCER LE CONTENEUR
+    docker run --name test-ic-webapp -p 8080:8080 -d ic-webapp:1.0
+
+SUPPR
+    docker rm -f test-ic-webapp
+
+POUSSER L image
+    docker tag ic-webapp:1.0 <votre-nom-d-utilisateur>/ic-webapp:1.0
+    docker push <votre-nom-d-utilisateur>/ic-webapp:1.0
+"
